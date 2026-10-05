@@ -1218,6 +1218,43 @@ button:focus-visible{
 }
 
 </style>
+
+<style id="density-rework-v1">
+/* DENSITY REWORK: CSS-only. Content, copy, diagrams, JS, links and images unchanged. */
+:root{--dense-radius:18px;--dense-grid:rgba(142,164,184,.035)}
+.visual,.compact-visual,.eng-visual,.pvisual{border-radius:var(--dense-radius)}
+.visual,.compact-visual,.pvisual{background-color:var(--surface,#191C22)!important;background-image:linear-gradient(var(--dense-grid) 1px,transparent 1px),linear-gradient(90deg,var(--dense-grid) 1px,transparent 1px)!important;background-size:28px 28px!important}
+.panel:not(.dark) .pvisual{background-color:#EAE5DC!important;background-image:linear-gradient(rgba(17,19,24,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(17,19,24,.025) 1px,transparent 1px)!important}
+@media(min-width:761px){
+.shell,.outcome-shell{height:100%;min-height:100%;align-content:stretch!important;align-items:center;padding-top:clamp(64px,7vh,86px);padding-bottom:clamp(30px,4vh,46px)}
+.outcome-shell>.compact-visual,.outcome-shell>.visual,.outcome-shell>.eng-visual,.shell>.visual{width:100%;min-height:clamp(420px,62vh,650px)!important;height:clamp(420px,62vh,650px)!important;align-self:center}
+.meaning-flow{width:100%;height:100%;align-items:stretch}.meaning-flow .mstep{height:100%;min-height:0;justify-content:center;gap:12px}.four-flow,.five-flow{align-items:stretch}
+.retrieval-compare{height:100%;align-items:stretch}.retrieval-compare .compare-side{min-height:0;height:100%;justify-content:center}
+.career-timeline{min-height:clamp(430px,62vh,650px);max-height:650px;height:62vh;align-content:stretch;grid-auto-rows:minmax(0,1fr)}.timeline-step{min-height:0}
+.eng-visual{display:grid;grid-template-rows:minmax(0,1fr) auto!important;gap:10px}.eng-photos{min-height:0!important;height:100%!important}
+.panel{overflow:hidden}.pgrid{height:100%;min-height:0!important;align-content:stretch!important;align-items:stretch!important}.pcopy{align-self:center}.pvisual{height:100%!important;max-height:none!important;min-height:0!important;align-self:stretch}
+.pflow,.pcards,.pchecks,.pbars,.pmatrix{width:100%}.pflow{height:100%;align-items:stretch}.pflow .pnode{min-height:0;height:100%}.pcards{height:100%;align-content:stretch;grid-auto-rows:minmax(0,1fr)}.pcard{min-height:0}.pchecks{align-content:center}.pbars{height:100%;min-height:0!important}
+}
+@media(max-width:760px){
+.scene{height:100svh;min-height:100svh}
+.shell,.outcome-shell{height:100%;min-height:100%;grid-template-columns:1fr!important;grid-template-rows:auto minmax(0,1fr)!important;align-content:stretch!important;align-items:stretch!important;gap:8px!important;padding:calc(42px + env(safe-area-inset-top)) 12px calc(18px + env(safe-area-inset-bottom))!important}
+.outcome-copy,.hero-copy{min-height:0}
+.outcome-shell>.visual,.outcome-shell>.compact-visual,.outcome-shell>.eng-visual,.shell>.visual{min-height:0!important;height:100%!important;max-height:none!important;align-self:stretch;padding:10px!important;border-radius:16px}
+.meaning-flow{height:100%;min-height:0;display:grid!important;grid-template-columns:1fr!important;align-content:stretch!important;align-items:stretch!important;gap:2px!important}
+.meaning-flow.four-flow{grid-template-rows:minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr)!important}
+.meaning-flow.five-flow{grid-template-rows:minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr)!important}
+.mstep{min-height:0!important;height:100%;padding:6px 8px!important;display:grid!important;grid-template-columns:54px 1fr!important;align-items:center!important;align-content:center;gap:8px!important}.mstep strong{font-size:clamp(.68rem,2.5vw,.82rem)!important}.marr{height:12px!important;min-height:12px;transform:rotate(90deg);display:grid!important;place-items:center}
+.retrieval-compare{height:100%;min-height:0;grid-template-columns:1fr!important;grid-template-rows:minmax(0,1fr) 18px minmax(0,1fr)!important;align-items:stretch;gap:4px!important}.retrieval-compare .compare-side{min-height:0!important;height:100%;justify-content:center}.change-label{min-height:18px!important;display:grid;place-items:center}
+.eng-visual{height:100%!important;min-height:0!important;display:grid;grid-template-rows:minmax(0,1fr) auto!important;gap:6px!important}.eng-photos{height:100%!important;min-height:0!important}
+.career-timeline{height:100%;min-height:0;align-self:stretch;align-content:stretch;grid-template-rows:minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr)!important;gap:0!important}.timeline-step{min-height:0!important;height:100%;padding:4px 0!important;align-content:center}.timeline-arrow{min-height:12px;height:12px;display:grid;align-items:center}
+.project{grid-template-rows:50px minmax(0,1fr) 52px!important}.panel{min-height:0;overflow:hidden!important;padding:8px 10px!important}.pgrid{height:100%;min-height:0!important;grid-template-columns:1fr!important;grid-template-rows:minmax(150px,1fr) auto!important;align-content:stretch!important;align-items:stretch!important;gap:7px!important}.pvisual{order:1;min-height:0!important;height:100%!important;max-height:none!important;padding:8px!important;border-radius:14px}.pcopy{order:2;min-height:0}
+.pflow{width:100%;height:100%;min-height:0;display:grid!important;grid-template-columns:1fr!important;align-content:stretch!important;gap:2px!important}.pflow .pnode{min-height:0!important;height:100%;padding:5px 7px!important;display:grid;place-items:center}.pflow .parrow{display:grid!important;min-height:10px;height:10px;transform:rotate(90deg);place-items:center}
+.pcards{height:100%;min-height:0;grid-template-columns:1fr 1fr!important;grid-auto-rows:minmax(0,1fr);align-content:stretch}.pcard{min-height:0!important;height:100%;padding:7px!important}.pchecks{height:100%;min-height:0;align-content:center}.pbars{height:100%;min-height:0!important;align-items:end}.pmatrix{height:100%;min-height:0}.pcell{min-height:0!important;display:flex;align-items:center}
+.kicker{margin-bottom:6px!important}.summary{margin-top:6px!important}.proofline{margin-top:5px!important}.actions{margin-top:6px!important}
+}
+@media(max-width:760px) and (max-height:720px){.shell,.outcome-shell{gap:6px!important;padding-top:calc(40px + env(safe-area-inset-top))!important}.outcome-copy h2{font-size:clamp(1.65rem,7.8vw,2.25rem)!important}.summary{font-size:.70rem!important;line-height:1.28!important}.proofline{font-size:.56rem!important}.actions{margin-top:4px!important}}
+
+</style>
 </head>
 <body>
 <div class="story" id="story">
